@@ -9,6 +9,8 @@
 	Copyright (c) 2021 Andrew "kroshmorkovkin" Ivanov, Larry "Diicorp95" Holst. MIT License.
 */
 
+function mimetype($extension) {switch ($extension){case 'wav':return 'audio/wav';case 'ogg':return 'audio/ogg';case 'mp3':return 'audio/mpeg';}}
+
 // Constants
 const IP_LENGTH = 8;
 const SAVE_TO = 'free-accounts-giveaway.txt';
@@ -19,7 +21,7 @@ const MUSIC = false;
 const HTML_MUSIC_FORMAT_EXT = null;
 const HTML_MUSIC_PATH = null;
 if (MUSIC) {
-	define("music_tag",'<audio autoplay loop><source src="'.music_here().'" type="'.mime_content_type(HTML_MUSIC_FORMAT_EXT).'"></audio>');
+	define("music_tag",'<audio autoplay loop><source src="'.music_here().'" type="'.mimetype(HTML_MUSIC_FORMAT_EXT).'"></audio>');
 } else {
 	define("music_tag",'');
 }
