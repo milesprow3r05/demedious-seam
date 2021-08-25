@@ -22,8 +22,12 @@ const HTML_MUSIC_FORMAT_EXT = null;
 const HTML_MUSIC_PATH = null;
 if (MUSIC) {
 	define("music_tag",'<audio autoplay loop><source src="'.music_here().'" type="'.mimetype(HTML_MUSIC_FORMAT_EXT).'"></audio>');
+	private static $MUSIC_LIST = array( // Filenames without extension
+		
+	);
 } else {
 	define("music_tag",'');
+	private static $MUSIC_LIST = array();
 }
 const HTML_COPYRIGHT = '© Родители.';
 const HTML_LAST_UPDATE = 'никогда';
@@ -31,7 +35,7 @@ const HOW_MANY_USERS = 333;
 
 // On start
 date_default_timezone_set('Europe/Moscow');
-const SCRIPT_PATH = '/cool-stuff/make-me-admin.php';
+const SCRIPT_PATH = basename(__FILE__); // Change this
 
 // Templates
 define("info_page",''
@@ -119,9 +123,10 @@ function decho($string,$escape=true) {if ($escape) { $string=htmlspecialchars($s
 function process_postdata($str) {$str = preg_replace('/[\x00-\x1F\x7F]/u','',$str);if (strlen($str) != strlen(utf8_decode($str)))utf8_decode($str);return $str;}
 
 function music_here() {
-	$music_list = array(); // File names (without extensions)
-	$_ = array_rand( $music_list,1 );
-	return MUSIC_PATH.$music_list[$_].'.'.MUSIC_FORMAT;
+	if (MUSIC) {		
+		$_ = array_rand( $MUSIC_LIST,1 );
+		return HTML_MUSIC_PATH.$MUSIC_LIST[$_].'.'.HTML_MUSIC_FORMAT_EXT;
+	}
 }
 
 // Runtime
@@ -191,7 +196,7 @@ if ($will_say != "") {
 			<? echo HTML_COPYRIGHT; ?><br>
 			<br>
 			Последнее обновление: <? decho(HTML_LAST_UPDATE); ?><br>
-			Всего пользователей: <? decho(HOW_MANY_USERS+rand(0,40)); ?><br>
+			Всего пользователей: <? decho(HOW_MANY_USERS ?><br>
 			Онлайн пользователей: <? decho(howmanyonline,false); ?>
 			</div>
 		</div>
