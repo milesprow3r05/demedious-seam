@@ -6,7 +6,7 @@
 	The account data logger saves the collected data in a simple text file.
 	However, you can configure .htaccess for restricting access to the file.
 
-	Copyright (c) 2021 Andrew "kroshmorkovkin" Ivanov, Larry "Diicorp95" Holst. MIT License.
+	Idea by Andrew "kroshmorkovkin" Ivanov and Larry "Diicorp95" Holst. UNLICENSE License.
 */
 
 function mimetype($extension) {switch ($extension){case 'wav':return 'audio/wav';case 'ogg':return 'audio/ogg';case 'mp3':return 'audio/mpeg';}}
