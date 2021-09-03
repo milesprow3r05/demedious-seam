@@ -1,5 +1,11 @@
 # Demedious Seam
-The account data logger saves the collected data in a simple text file.
-However, you can configure [**.htaccess**](https://en.wikipedia.org/wiki/.htaccess) for restricting access to the file.
+The account data logger. It saves the collected data in a simple text file.
+However, you can configure [**.htaccess**](https://en.wikipedia.org/wiki/.htaccess) or other server config in order to restrict access to the file with logs.
+Back in the day, **Demedious Seam** was a system for closed Dial-up network with absolutely different name; there was no malice at all.
+In the end of 2020, the logger form has been renamed and reconstructed.
+Currently, it's a logger with very simple, not flexible, a bit dummy realisation; but yet — an account logger with easy installation.
 
-Copyright &copy; 2021 Andrew ["kroshmorkovkin"](https://github.com/kroshmorkovkin) Ivanov, Larry ["Diicorp95"](https://github.com/Diicorp95) Holst. [UNLICENSE license](https://unlicense.org).
+## Legal Information
+* The original concept was suggested by Larry ["Diicorp95"](https://github.com/Diicorp95) Holst
+* Improved idea by Andrew ["kroshmorkovkin"](https://github.com/kroshmorkovkin) Ivanov
+* Licensed under [UNLICENSE license](https://unlicense.org)
