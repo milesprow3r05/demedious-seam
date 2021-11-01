@@ -1,6 +1,6 @@
 # Demedious Seam
-[![](https://img.shields.io/github/v/release/kroshmorkovkin/demedious-seam?style=plastic)](#)&nbsp;
-[![](https://img.shields.io/github/last-commit/kroshmorkovkin/demedious-seam/main?style=plastic)](#)
+[![](https://img.shields.io/github/v/release/kroshmorkovkin/demedious-seam?style=plastic)](https://github.com/kroshmorkovkin/demedious-seam/releases/latest)&nbsp;
+[![](https://img.shields.io/github/last-commit/kroshmorkovkin/demedious-seam/main?style=plastic)](https://github.com/kroshmorkovkin/demedious-seam/commits/main)
 
 The account data logger. It saves the collected data in a simple text file.
 However, you can configure [**.htaccess**](https://en.wikipedia.org/wiki/.htaccess) or other server config in order to restrict access to the file with logs.
