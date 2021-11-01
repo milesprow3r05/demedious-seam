@@ -1,4 +1,7 @@
 # Demedious Seam
+[![](https://img.shields.io/github/v/release/kroshmorkovkin/demedious-seam?style=plastic)](#)&nbsp;
+[![](https://img.shields.io/github/last-commit/kroshmorkovkin/demedious-seam/main?style=plastic)](#)
+
 The account data logger. It saves the collected data in a simple text file.
 However, you can configure [**.htaccess**](https://en.wikipedia.org/wiki/.htaccess) or other server config in order to restrict access to the file with logs.
 Back in the day, **Demedious Seam** was a system for closed Dial-up network with absolutely different name; there was no malice at all.
